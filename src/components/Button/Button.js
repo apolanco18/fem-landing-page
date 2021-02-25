@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 import UButton from '@material-ui/core/Button';
 import styled, {css} from 'styled-components';
@@ -33,3 +35,9 @@ const GenericButton = ({buttonName}) => {
 }
 
 export default GenericButton;
+
+GenericButton.propTypes = {
+    /* Text of the Button */
+    buttonName: PropTypes.string,
+}
+
