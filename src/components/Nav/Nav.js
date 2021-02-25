@@ -31,7 +31,7 @@ const StyledToolbar = styled(Toolbar)`
 const Nav = ({btnArgs}) => {
     return (
         <div>
-            <StyledAppBar position="static">
+            <StyledAppBar position="static" elevation={0}>
                 <StyledToolbar>
                     <Logo/>
                     <GenericButton
