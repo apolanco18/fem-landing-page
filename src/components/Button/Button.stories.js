@@ -11,7 +11,7 @@ export default {
 // export const Default = Template.bind({});
 
 const buttonProps = {
-    buttonName: 'Default',
+    buttonName: 'Hello',
 }
 
 export const Default = (args) => {

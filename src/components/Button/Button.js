@@ -2,7 +2,6 @@ import React from 'react';
 
 import UButton from '@material-ui/core/Button';
 import styled, {css} from 'styled-components';
-import './button.css'
 
 const Button = styled(UButton)`
     &&{
@@ -27,7 +26,7 @@ const Button = styled(UButton)`
 
 const GenericButton = ({buttonName}) => {
     return (
-        <Button className="btn btn-text" variant="contained">
+        <Button variant="contained">
             {buttonName}
         </Button>
     );
