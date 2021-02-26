@@ -44,7 +44,11 @@ const Nav = ({btnArgs}) => {
         <div>
             <StyledAppBar position="static" elevation={0}>
                 <StyledToolbar>
-                    <Logo/>
+                    <Logo
+                        width={160}
+                        height={32}
+                        fill={'#242D52'}
+                    />
                     {
                         (matches) ?
                         <CustomMenuIcon/>

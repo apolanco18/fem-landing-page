@@ -15,3 +15,9 @@ export const Default = (args) => {
         />
     )
 }
+
+Default.args = {
+    width:160,
+    height:32,
+    fill:'#242D52',
+}

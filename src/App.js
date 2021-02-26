@@ -3,6 +3,7 @@ import './App.css';
 
 import Nav from '../src/components/Nav/Nav'
 import Home from '../src/screens/Home/Home'
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         btnArgs={{buttonName:'Get Started'}}
       />
       <Home/>
+      <Footer/>
     </div>
   );
 }
