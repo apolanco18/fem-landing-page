@@ -7,10 +7,9 @@ import styled, {css} from 'styled-components';
 
 const Button = styled(UButton)`
     &&{
-        width: 130px;
-        height: 44px;
-        box-shadow: 0px 6px 6px -2px rgba(0, 0, 0, 0.25);
-        border-radius: 25px;
+        width: 70px;
+        height: 40px;
+        border-radius: 20px;
         background-color: hsl(12, 88%, 59%);
         font-size: 14px;
         font-family: Roboto;
@@ -20,13 +19,9 @@ const Button = styled(UButton)`
         text-transform: capitalize;
     }
 
-    &&:hover {
-        opacity: 0.5;
-        background: hsl(12, 88%, 59%);
-    }
 `;
 
-const GenericButton = ({buttonName}) => {
+const SmallButton = ({buttonName}) => {
     return (
         <Button variant="contained">
             {buttonName}
@@ -34,9 +29,9 @@ const GenericButton = ({buttonName}) => {
     );
 }
 
-export default GenericButton;
+export default SmallButton;
 
-GenericButton.propTypes = {
+SmallButton.propTypes = {
     /* Text of the Button */
     buttonName: PropTypes.string,
 }
