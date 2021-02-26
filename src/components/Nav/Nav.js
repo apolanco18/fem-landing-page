@@ -33,6 +33,8 @@ const StyledAppBar = styled(AppBar)`
 const StyledToolbar = styled(Toolbar)`
 &&{
     justify-content:space-between;
+    width:80%;
+    align-self:center;
 }
 `;
 
