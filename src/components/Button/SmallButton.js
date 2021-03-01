@@ -12,7 +12,7 @@ const Button = styled(UButton)`
         border-radius: 20px;
         background-color: hsl(12, 88%, 59%);
         font-size: 14px;
-        font-family: Roboto;
+        font-family: Be Vietnam, sans-serif;
         font-style: normal;
         font-weight: bold;
         color: white;

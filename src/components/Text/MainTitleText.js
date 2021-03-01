@@ -12,7 +12,7 @@ const StyledH1 = styled.h1.attrs(props => ({
     
 })) `
     && {
-        font-family: Roboto;
+        font-family: Be Vietnam, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: ${props => props.fontSize};

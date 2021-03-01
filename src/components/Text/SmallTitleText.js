@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const StyledTitle = styled.h4`
     && {
-        font-family: Roboto;
+        font-family: Be Vietnam, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 16px;

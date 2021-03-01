@@ -13,7 +13,7 @@ const Button = styled(UButton)`
         border-radius: 25px;
         background-color: hsl(12, 88%, 59%);
         font-size: 14px;
-        font-family: Roboto;
+        font-family: Be Vietnam, sans-serif;
         font-style: normal;
         font-weight: bold;
         color: white;
@@ -39,5 +39,9 @@ export default GenericButton;
 GenericButton.propTypes = {
     /* Text of the Button */
     buttonName: PropTypes.string,
+}
+
+GenericButton.defaultProps = {
+    buttonName: 'Get Started'
 }
 
