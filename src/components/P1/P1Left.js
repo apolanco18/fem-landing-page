@@ -12,7 +12,7 @@ const StyledDiv = styled.div.attrs(props => ({
         width: (props.isSmall) ? '100%':'80%' ,
     },
     bodyText:{
-        width: (props.isSmall) ? '100%':'50%' ,
+        width: (props.isSmall) ? '100%':'55%' ,
     }
 }))`
     &.container{
@@ -37,22 +37,28 @@ const StyledDiv = styled.div.attrs(props => ({
         justify-content: center;
         display:flex;
     }
+    .center-text {
+        text-align:center;
+    }
 
 `;
 
 const P1Left = ({titleArgs,bodyTextArgs,btnArgs}) => {
     const matches = useMediaQuery('(max-width:375px)');
-    const btnStyle = matches ? 'btn-mobile btn' : 'btn'
+    const btnStyle = matches ? 'btn-mobile btn' : 'btn';
+    const hdrStyle = matches ? 'heading-text center-text' : 'heading-text';
+    const bdyTxtStyle = matches ? 'body-text center-text' : 'body-text';
+
     return (
         <StyledDiv className="container"
             isSmall={matches}
         >
-            <div className="heading-text">
+            <div className={hdrStyle}>
                 <MainTitleText
                     {...titleArgs}
                 />
             </div>
-            <div className="body-text">
+            <div className={bdyTxtStyle}>
                 <BodyText
                     {...bodyTextArgs} 
                 />

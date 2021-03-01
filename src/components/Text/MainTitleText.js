@@ -6,7 +6,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 
 const StyledH1 = styled.h1.attrs(props => ({
-    fontSize: (props.isSmall) ? '40px' : '58px',
+    fontSize: (props.isSmall) ? '35px' : '58px',
     lineHeight: (props.isSmall) ? '50px' : '68px',
 
     
@@ -17,7 +17,6 @@ const StyledH1 = styled.h1.attrs(props => ({
         font-weight: bold;
         font-size: ${props => props.fontSize};
         line-height: ${props => props.lineHeight};
-
         color: hsl(228, 39%, 23%);
 
     }
