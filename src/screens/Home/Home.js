@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import P1 from '../../components/P1/P1';
 import P2 from '../../components/P2/P2';
+import P3 from '../../components/P3/P3'
 import Grid from '@material-ui/core/Grid';
 
 
@@ -26,6 +27,12 @@ const StyledDiv = styled.div`
         display:flex;
         justify-content:center;
     }
+    .empty-space-sm {
+        height:100px;
+    }
+    .empty-space-med {
+        height:200px;
+    }
 `;
 const Home = () => {
 
@@ -41,6 +48,11 @@ const Home = () => {
                     <P2
                     />
                 </div>
+                <div className="empty-space-sm"></div>
+                <div>
+                    <P3/>
+                </div>
+                <div className="empty-space-med"></div>
             </StyledDiv>
         </div>
         

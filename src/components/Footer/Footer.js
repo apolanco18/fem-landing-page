@@ -47,7 +47,7 @@ const StyledDiv = styled.div.attrs(props => ({
 
     .footer-div {
         width:${props => props.footerRow.width};
-        padding: 40px 0 20px 0;
+        padding: 40px 0 0 0;
     }
 
     .footer-div-mobile {

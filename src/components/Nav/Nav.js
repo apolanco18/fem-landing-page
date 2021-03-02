@@ -44,19 +44,28 @@ const Nav = ({btnArgs}) => {
         <div>
             <StyledAppBar position="static" elevation={0}>
                 <StyledToolbar>
-                    <Logo
-                        width={160}
-                        height={32}
-                        fill={'#242D52'}
-                    />
-                    {
-                        (matches) ?
-                        <CustomMenuIcon/>
-                        :
-                        <GenericButton
-                        {...btnArgs}
+                    <div>
+                        <Logo
+                            width={160}
+                            height={32}
+                            fill={'#242D52'}
                         />
-                    }
+                    </div>
+                    
+                    <div>
+                        gefe
+                    </div>
+                    <div>
+                        {
+                            (matches) ?
+                            <CustomMenuIcon/>
+                            :
+                            <GenericButton
+                            {...btnArgs}
+                            />
+                        }
+                    </div>
+                    
 
                     
                 </StyledToolbar>
