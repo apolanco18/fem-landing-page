@@ -10,6 +10,10 @@ import styled from 'styled-components';
 const StyledUl = styled.ul.attrs(props => ({
     padding: (props.isSmall) ? '0 0 0 0' : '0 0 0 40px',
     width: (props.isSmall) ? '100%' : '80%',
+
+    smBtnCont:{
+        width: (props.isSmall) ? '25%' : '20%'
+    },
 }))`
     &.ul-style {
         list-style:none;
@@ -28,7 +32,7 @@ const StyledUl = styled.ul.attrs(props => ({
         justify-content: flex-start;
         align-items: center;
         display: flex;
-        width: 20%;
+        width: ${props => props.smBtnCont.width};
     }
     .main-title-container {
         flex-grow: 1;

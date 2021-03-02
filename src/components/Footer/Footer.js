@@ -3,16 +3,26 @@ import FooterIconCarousel from '../FooterIconCarousel/FooterIconCarousel';
 import Logo from '../Logo/Logo';
 import { Default } from '../Logo/Logo.stories';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-
+import Grid from '@material-ui/core/Grid';
 import styled from 'styled-components';
+import BtnText from '../Text/BtnText'
 
 const StyledDiv = styled.div.attrs(props => ({
     socialMedia:{
-        width: (props.isSmall) ? '100%':'50%' ,
+        width: (props.isSmall) ? '100%':'30%' ,
     },
     footerRow:{
-        width:(props.isSmall) ? '100%':'40%' ,
-    }
+        width:(props.isSmall) ? '100%':'60%' ,
+    },
+    contentCont: {
+        direction: (props.isSmall) ? 'column' : 'row'
+    },
+    gridCont: {
+        width: (props.isSmall) ? '100%':'45%' ,
+    },
+    footerContainer:{
+        height:(props.isSmall) ? '440px':'250px',
+    },
 }))`
     &.footer-container {
         display:flex;
@@ -20,12 +30,13 @@ const StyledDiv = styled.div.attrs(props => ({
         align-items:center;
         background:hsl(233, 12%,13%);
         padding 10px 10px 10px 10px;
-        height:250px;
+        height:${props => props.footerContainer.height}; 
     }
     .content-container {
-        justify-content:space-between;
         width:80%;
         padding: 20px 0;
+        flex-direction: ${props => props.contentCont.direction};
+        display: flex;
     }
 
     .social-media-sec {
@@ -53,15 +64,67 @@ const StyledDiv = styled.div.attrs(props => ({
     .footer-div-mobile {
         padding: 20px 0 20px 0;
     }
+
+    .footer-txt-container {
+        margin-bottom:15px;
+    }
+
+    .grid-cont {
+        width:${props => props.gridCont.width};
+    }
+
+    .second {
+        order:2
+    }
+
+    .last {
+        order:3
+    }
 `;
 const Footer = () => {
 
     const matches = useMediaQuery('(max-width:375px)');
+    const btnTxtProps = {
+        color:"#fff",
+        opac:1,
+        hovColor:"hsl(12, 88%, 59%)",
+    }
+
+    const btnTxtData = [
+        {
+            txt:"Home",
+            isLast:false,
+        },
+        {
+            txt:"Careers",
+            isLast:false,
+        },
+        {
+            txt:"Pricing",
+            isLast:false,
+        },
+        {
+            txt:"Community",
+            isLast:false,
+        },
+        {
+            txt:"Products",
+            isLast:false,
+        },
+        {
+            txt:"Privacy Policy",
+            isLast:false,
+        },
+        {
+            txt:"About Us",
+            isLast:true,
+        },
+    ]
     
     return (
         <StyledDiv className="footer-container" isSmall={matches}>
             <div className="content-container">
-                <div className="social-media-sec">
+                <div className={`social-media-sec ${matches ? 'last' : ''}`}>
                     <div className={matches ? "logo-div logo-div-mobile" : "logo-div"}>
                         <Logo
                             width={160}
@@ -74,7 +137,22 @@ const Footer = () => {
                     </div>
                     
                 </div>
-                <div></div>
+                <div className={`grid-cont ${matches ? 'second' : ''}`}>
+                    <Grid container>
+                        {
+                            btnTxtData.map(data => (
+                                <Grid item xs={6} className={`${data.isLast ? '' : 'footer-txt-container'}`}>
+                                    <BtnText
+                                        text={data.txt}
+                                        {...btnTxtProps}
+                                    />
+                                </Grid>
+                            ))
+                        }
+                    </Grid>
+
+                </div>
+                <div>Helo</div>
             </div>
             
         </StyledDiv>

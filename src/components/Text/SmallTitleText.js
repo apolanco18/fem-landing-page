@@ -8,7 +8,7 @@ const StyledTitle = styled.h4`
         font-family: Be Vietnam, sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 19px;
         color: hsl(228, 39%, 23%);
     }

@@ -14,15 +14,18 @@ const StyledA = styled.a.attrs(props => ({
         line-height: 16px;
     }
     &.a-txt:hover {
-        opacity: 0.5;
+        opacity: ${props => props.opac};
+        color: ${props => props.hovColor}
     }
 `;
 
 
-const BtnText = ({text,color}) => {
+const BtnText = ({text,color,hovColor,opac}) => {
     return(
         <StyledA className="a-txt"
             color={color}
+            hovColor={hovColor}
+            opac={opac}
         >
             {text}
         </StyledA>
@@ -33,5 +36,6 @@ export default BtnText;
 
 BtnText.defaultProps = {
     color:"hsl(228,39%,23%)",
-    text:"Hello World"
+    text:"Hello World",
+    opac:0.5,
 }
