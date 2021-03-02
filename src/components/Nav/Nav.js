@@ -17,6 +17,7 @@ import styled, {css} from 'styled-components';
 import Logo from '../Logo/Logo';
 import GenericButton from '../Button/Button';
 import CustomMenuIcon from '../MenuIcon/MenuIcon';
+import BtnText from '../Text/BtnText'
 
 
 const StyledAppBar = styled(AppBar)`
@@ -31,19 +32,50 @@ const StyledAppBar = styled(AppBar)`
 `;
 
 const StyledToolbar = styled(Toolbar)`
-&&{
+&.toolbar-container{
     justify-content:space-between;
     width:80%;
     align-self:center;
+}
+
+.btn-text-container {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.hide-elem{
+    display:none;
 }
 `;
 
 const Nav = ({btnArgs}) => {
     const matches = useMediaQuery('(max-width:375px)');
+
+    const headerDataTxt = (matches) ? "hide-elem" : "btn-text-container";
+
+    const headerData = [
+        {
+            txt:"Pricing"
+        },
+        {
+            txt:"Product",
+        },
+        {
+            txt:"About Us",
+        },
+        {
+            txt:"Careers",
+        },
+        {
+            txt:"Community",
+        },
+    ]
+
     return (
         <div>
             <StyledAppBar position="static" elevation={0}>
-                <StyledToolbar>
+                <StyledToolbar className="toolbar-container">
                     <div>
                         <Logo
                             width={160}
@@ -51,9 +83,15 @@ const Nav = ({btnArgs}) => {
                             fill={'#242D52'}
                         />
                     </div>
-                    
-                    <div>
-                        gefe
+                        
+                    <div className={headerDataTxt}>
+                        {
+                            headerData.map(data => (
+                                <BtnText
+                                text={data.txt}
+                                />
+                            ))
+                        }
                     </div>
                     <div>
                         {
