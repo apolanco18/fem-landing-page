@@ -14,16 +14,17 @@ const StyledH = styled.h2.attrs(props => ({
         font-size:${props => props.fontSize};
         font-weight: bold;
         line-height: 50px;
-        color: hsl(228,39%,23%);
+        color: ${props => props.color};
 
     }
 `;
-const MediumTitleText = ({text}) => {
+const MediumTitleText = ({text,color}) => {
     const matches = useMediaQuery('(max-width:375px)');
 
     return (
         <StyledH
             isSmall={matches}
+            color={color}
         >
             {text}
         </StyledH>
@@ -33,5 +34,6 @@ const MediumTitleText = ({text}) => {
 export default MediumTitleText;
 
 MediumTitleText.defaultProps = {
-    text: "What's different about Manage"
+    text: "What's different about Manage",
+    color:"hsl(228,39%,23%)"
 }
