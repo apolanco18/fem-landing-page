@@ -9,9 +9,10 @@ const StyledA = styled.a.attrs(props => ({
         color:${props => props.color};
         font-family: Be Vietnam, sans-serif;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 14px;
         line-height: 16px;
+        text-decoration:none;
     }
     &.a-txt:hover {
         opacity: ${props => props.opac};
@@ -26,6 +27,7 @@ const BtnText = ({text,color,hovColor,opac}) => {
             color={color}
             hovColor={hovColor}
             opac={opac}
+            href="#"
         >
             {text}
         </StyledA>

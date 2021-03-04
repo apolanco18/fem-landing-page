@@ -17,6 +17,7 @@ const Button = styled(UButton)`
         font-weight: bold;
         color: white;
         text-transform: capitalize;
+        pointer-events: none;
     }
 
 `;
